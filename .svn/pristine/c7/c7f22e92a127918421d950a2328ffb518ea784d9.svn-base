@@ -1,0 +1,63 @@
+//
+//  FiveViewController.m
+//  ChinaTest
+//
+//  Created by ding _tk on 16/8/9.
+//  Copyright © 2016年 ding _tk. All rights reserved.
+//
+
+#import "FiveViewController.h"
+#import "MessageCollectionCell.h"
+@interface FiveViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
+
+@end
+
+@implementation FiveViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc]init];
+ 
+        layout.itemSize = CGSizeMake((MainScreenWidth/2)-30,200);
+ 
+    
+    layout.sectionInset = UIEdgeInsetsMake(5, 5 ,5, 5);
+    layout.scrollDirection = UICollectionViewScrollDirectionVertical;
+    
+    
+    
+    _collectionView.collectionViewLayout = layout;
+    _collectionView.showsHorizontalScrollIndicator = NO;
+    _collectionView.alwaysBounceHorizontal = NO;
+    
+   _collectionView.backgroundColor = [UIColor clearColor];
+   _collectionView.bounces = NO;
+   _collectionView.delegate =self;
+    _collectionView.dataSource =self;
+    
+    
+    [_collectionView registerNib:[UINib nibWithNibName:@"MessageCollectionCell" bundle:nil] forCellWithReuseIdentifier:@"MessageCollectionCell"];
+
+    
+    // Do any additional setup after loading the view from its nib.
+}
+
+#pragma  collection-delegate
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
+    return 5;
+    
+}
+//显示的内容
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    MessageCollectionCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"MessageCollectionCell" forIndexPath:indexPath];
+    
+    if (cell == nil) {
+        cell = [[[NSBundle mainBundle]loadNibNamed:@"MessageCollectionCell" owner:nil options:nil]lastObject];
+    }
+    
+    
+    return cell;
+}
+@end

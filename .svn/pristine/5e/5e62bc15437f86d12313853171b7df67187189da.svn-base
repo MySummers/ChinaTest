@@ -1,0 +1,89 @@
+//
+//  messageViewController.m
+//  ChinaTest
+//
+//  Created by ding _tk on 16/8/9.
+//  Copyright © 2016年 ding _tk. All rights reserved.
+//
+#import "DetailVC.h"
+#import "messageViewController.h"
+#import "DataPromptView.h"
+#import "DetailViewController.h"
+@interface messageViewController ()
+
+@end
+
+@implementation messageViewController
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    //self.title = @"云服务";
+
+    [DataPromptView showDataPromptViewWithCenter:CGPointMake(self.view.bounds.size.width * 0.5, self.view.bounds.size.height * 0.5 - 32) message:@"暂无数据" inSuperView:self.view];
+
+
+    //[self addSlideView];
+    // Do any additional setup after loading the view, typically from a nib.
+}
+-(void)addSlideView{
+    self.tabedSlideView = [[DLTabedSlideView alloc]initWithFrame:CGRectMake(0,0, self.view.frame.size.width, self.view.frame.size.height-64)];
+    [self.view addSubview:self.tabedSlideView];
+    self.tabedSlideView.delegate = self;
+    self.tabedSlideView.baseViewController = self;
+    self.tabedSlideView.tabItemNormalColor = [UIColor blackColor];
+    self.tabedSlideView.tabItemSelectedColor = [UIColor colorWithRed:109/255.0f green:173/255.0f blue:68/255.0f alpha:1];
+    self.tabedSlideView.tabbarTrackColor = [UIColor colorWithRed:109/255.0f green:173/255.0f blue:68/255.0f alpha:1];
+    self.tabedSlideView.tabbarBackgroundImage = [UIImage imageNamed:@"tabbarBk"];
+    self.tabedSlideView.tabbarBottomSpacing = 3.0;
+    self.tabedSlideView.backgroundColor = [UIColor whiteColor];
+    DLTabedbarItem *item1 = [DLTabedbarItem itemWithTitle:@"系统" image:nil selectedImage:nil];
+    DLTabedbarItem *item2 = [DLTabedbarItem itemWithTitle:@"医生" image:nil selectedImage:nil];
+    DLTabedbarItem *item3 = [DLTabedbarItem itemWithTitle:@"好友" image:nil selectedImage:nil];
+    DLTabedbarItem *item4 = [DLTabedbarItem itemWithTitle:@"咨询" image:nil selectedImage:nil];
+    DLTabedbarItem *item5 = [DLTabedbarItem itemWithTitle:@"广场" image:nil selectedImage:nil];
+    self.tabedSlideView.tabbarItems = @[item1, item2, item3,item4,item5];
+    [self.tabedSlideView buildTabbar];
+    self.tabedSlideView.selectedIndex = 0;
+}
+
+#pragma mark DLTabedSlideViewDelegate
+- (NSInteger)numberOfTabsInDLTabedSlideView:(DLTabedSlideView *)sender{
+    return 4;
+}
+- (UIViewController *)DLTabedSlideView:(DLTabedSlideView *)sender controllerAt:(NSInteger)index{
+    switch (index) {
+        case 0:
+        {
+            DetailVC *ctrl = [[DetailVC alloc]init];
+
+            return ctrl;
+        }
+        case 1:
+        {
+            DetailVC *ctrl = [[DetailVC alloc]init];
+            return ctrl;
+        }
+        case 2:
+        {
+            DetailVC *ctrl = [[DetailVC alloc]init];
+            return ctrl;
+        }
+        case 3:
+        {
+            DetailVC *ctrl = [[DetailVC alloc]init];
+            return ctrl;
+        }
+        case 4:
+        {
+            DetailVC *ctrl = [[DetailVC alloc]init];
+            return ctrl;
+        }
+        default:
+            return nil;
+    }
+}
+- (void)DLTabedSlideView:(DLTabedSlideView *)sender didSelectedAt:(NSInteger)index {
+    self.tabedSlideView.selectedIndex = index;
+}
+
+@end

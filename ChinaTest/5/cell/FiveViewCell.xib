@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9046" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="FiveViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="175" height="232"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="175" height="232"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="测试图片" translatesAutoresizingMaskIntoConstraints="NO" id="GWD-gH-ccL">
+                        <rect key="frame" x="8" y="8" width="159" height="141"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="资生堂眼膜Revital悦微质纯防眼膜12对aa去细细......." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iiK-oj-5Hf">
+                        <rect key="frame" x="8" y="157" width="159" height="41"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="41" id="nQW-LA-0tK"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="￥338" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e63-R7-SwU">
+                        <rect key="frame" x="8" y="203" width="66" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="4d3-dy-sVJ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="375" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEQ-GD-IzA">
+                        <rect key="frame" x="101" y="203" width="66" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="foL-3o-o0x"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstItem="iiK-oj-5Hf" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="BOq-ju-ZVB"/>
+                <constraint firstAttribute="bottom" secondItem="iEQ-GD-IzA" secondAttribute="bottom" constant="8" id="EEi-XG-68Q"/>
+                <constraint firstItem="iEQ-GD-IzA" firstAttribute="leading" secondItem="e63-R7-SwU" secondAttribute="trailing" constant="27" id="EjD-PC-uhQ"/>
+                <constraint firstItem="iiK-oj-5Hf" firstAttribute="top" secondItem="GWD-gH-ccL" secondAttribute="bottom" constant="8" id="H3V-kD-ItK"/>
+                <constraint firstItem="iEQ-GD-IzA" firstAttribute="top" secondItem="iiK-oj-5Hf" secondAttribute="bottom" constant="5" id="KEK-F7-eCm"/>
+                <constraint firstItem="iEQ-GD-IzA" firstAttribute="leading" secondItem="e63-R7-SwU" secondAttribute="trailing" constant="27" id="LDE-9h-VhU"/>
+                <constraint firstAttribute="trailing" secondItem="iiK-oj-5Hf" secondAttribute="trailing" constant="8" id="Q8U-C8-PDW"/>
+                <constraint firstAttribute="trailing" secondItem="iEQ-GD-IzA" secondAttribute="trailing" constant="8" id="YWJ-3m-pUj"/>
+                <constraint firstItem="e63-R7-SwU" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="cSn-cZ-ngv"/>
+                <constraint firstAttribute="bottom" secondItem="e63-R7-SwU" secondAttribute="bottom" constant="8" id="gH2-6K-2M7"/>
+                <constraint firstItem="GWD-gH-ccL" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="8" id="qZK-0x-HTH"/>
+                <constraint firstItem="iEQ-GD-IzA" firstAttribute="width" secondItem="e63-R7-SwU" secondAttribute="width" id="sA3-fO-mTw"/>
+                <constraint firstAttribute="trailing" secondItem="GWD-gH-ccL" secondAttribute="trailing" constant="8" id="vgV-SU-0N1"/>
+                <constraint firstItem="GWD-gH-ccL" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="ysf-o5-Eh4"/>
+            </constraints>
+            <size key="customSize" width="175" height="232"/>
+            <point key="canvasLocation" x="191.5" y="200"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="测试图片" width="375" height="175"/>
+    </resources>
+</document>

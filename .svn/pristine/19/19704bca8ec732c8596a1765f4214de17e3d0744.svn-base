@@ -1,0 +1,24 @@
+{
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "db7d7584-a535-be40-9bfa-0548fdd8b488++5950" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "db7d7584-a535-be40-9bfa-0548fdd8b488++5950" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "C95A0C87-892B-43D2-9068-F9DAFFBCF19A",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "db7d7584-a535-be40-9bfa-0548fdd8b488++5950" : "ChinaTest\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "ChinaTest",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "ChinaTest.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/360unicom.oicp.net\/svn\/diy",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "db7d7584-a535-be40-9bfa-0548fdd8b488++5950"
+    }
+  ]
+}
